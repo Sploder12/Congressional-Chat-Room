@@ -4,12 +4,17 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    # if request.method == "POST":
+    if request.method == "POST":
+        return redirect(url_for("irc"))
     return render_template("home.html")
 
+@app.route("/irc", methods=["GET", "POST"])
+def irc():
+    return render_template("irc.html")
+
 if __name__ == '__main__':
-    ip = "192.168.68.111" 
-    port = "8000"
+    ip = "localhost" 
+    port = "80"
     if "ip" not in locals():
         ip = input("Enter the IP: ")
     if "port" not in locals():
