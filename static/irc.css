@@ -49,7 +49,6 @@ html, body {
 	border-radius: 5px;
 }
 .msg h3 {
-	display: inline-block;
 	float: left;
 	font-size: 100%;
 	font-weight: normal;
@@ -58,7 +57,6 @@ html, body {
 	padding: 0;
 }
 .msg .channel_lbl {
-	display: inline-block;
 	float: right;
 	font-size: 80%;
 	color: #00aacc;

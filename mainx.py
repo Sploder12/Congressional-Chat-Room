@@ -330,7 +330,7 @@ class WebChat(Namespace):
 					},
 				}, broadcast=True)
 				
-		print 'Client disconnected {}'.format(request.sid)
+		print('Client disconnected {}'.format(request.sid))
 
 	def on_my_ping(self):
 		emit('my_pong')
