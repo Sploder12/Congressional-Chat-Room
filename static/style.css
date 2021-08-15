@@ -1,0 +1,40 @@
+h1 {
+    color: rgb(138, 43, 226);
+  }
+  
+h2 {
+  color: green;
+}
+
+body {
+  background-color: #00070ed4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  color: rgb(138, 43, 226);
+}
+
+.jake {
+  color: red;
+}
+
+.shaan {
+  color: orange;
+}
+
+.kevin {
+  color: orange;
+}
+
+.arhan {
+  color: turquoise;
+}
+
+.ryan {
+  color: turquoise;
+}
+
+.center {
+  text-align: center;
+}
