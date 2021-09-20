@@ -19,19 +19,11 @@ p {
   color: red;
 }
 
-.shaan {
+.shaanKevin {
   color: orange;
 }
 
-.kevin {
-  color: orange;
-}
-
-.arhan {
-  color: turquoise;
-}
-
-.ryan {
+.arhanRyan {
   color: turquoise;
 }
 
@@ -56,4 +48,9 @@ p {
 
 .button2:hover {
   background-color: #3e8e41;
+}
+
+.textInput {
+  position:absolute; left: 0; right: 0; bottom: 0%;
+  height: auto;
 }
