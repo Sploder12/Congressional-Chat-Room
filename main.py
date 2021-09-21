@@ -30,10 +30,4 @@ def handle_message(data):
 
 
 if __name__ == '__main__':
-    ip = "localhost" 
-    port = 8000
-    if "ip" not in locals():
-        ip = input("Enter the IP: ")
-    if "port" not in locals():
-        port = int(input("Enter the Port: "))
-    socketio.run(app, host=ip, port=port)
+    socketio.run(app) # Runs on localhost:5000
