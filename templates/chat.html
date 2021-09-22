@@ -17,25 +17,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
     </head>
     <body>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                var domain = "localhost";
-                var port = "5000";
-                var socket = io.connect('http://'+domain+':'+port);
-                socket.on('connect', function() {
-                    socket.send("User has connected!");
-                })
-                socket.on('message', function(msg) {
-                    $("#messages").append('<li>'+msg+'</li>');
-                })
-                $('#sendbutton').on('click', function() {
-                    socket.send($('#myMessage').val());
-                    $('#myMessage').val('');
-                })
-            })
-        </script>
-        <ul id="messages"></ul>
+        <script src="{{ url_for('static', filename='client.js') }}" type="text/javascript" charset="utf-8"></script>
+        <div id="messages"></div>
         <div method="post" class="textInput" id="todo-form">
+            <input type="text" id="username" style="width: 20%; height: 40px;">
+            <button id="userbutton" onclick="toggleMessagebox()" style="width: 8%; height: 40px;">Set Username</button>
             <input type="text" id="myMessage" style="width: 90%; height: 80px;">
             <button id="sendbutton" style="width: 8%; height: 80px;">Submit</button>
         </div>

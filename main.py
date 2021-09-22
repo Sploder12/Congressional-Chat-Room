@@ -23,10 +23,20 @@ def about():
 def chat():
     return render_template("chat.html")
 
-@socketio.on('message')
+@socketio.on('message', namespace="/")
 def handle_message(data):
-    print('received message: ' + data)
-    send(data, broadcast=True)
+    try:
+        if data[0] != "":
+            if data[1] == "message":
+                print(data)
+                print('received message: ' + data[0])
+                send(data[0], broadcast=True)
+            elif data[1] == "username":
+                print(data[0]+" connected")
+    except:
+        print("data failed:")
+        print(data)
+
 
 
 if __name__ == '__main__':
