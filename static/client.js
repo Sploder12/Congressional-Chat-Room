@@ -19,16 +19,34 @@ $(document).ready(function() {
     $('#userbutton').on('click', function() {
         socket.send([$("#username").val()+" has connected!", "message"]);
         socket.send([$('#username').val(), "username"]);
-    })
-})
-function toggleMessagebox() {
         var messageBox = document.getElementById('myMessage');
         var subButton = document.getElementById('sendbutton');
         var userButton = document.getElementById('userbutton');
         var userName = document.getElementById('username'); 
-        subButton.style.display = 'block';
-        messageBox.style.display = 'block';
+        subButton.style.display = 'inline';
+        messageBox.style.display = 'inline';
         userName.style.display = 'none';
         userButton.style.display = 'none';
-
-    }
+    })
+    $('#username').keypress(function(event) {
+        if (event.keyCode == 13 || event.which == 13) {
+            socket.send([$("#username").val()+" has connected!", "message"]);
+            socket.send([$('#username').val(), "username"]);
+            var messageBox = document.getElementById('myMessage');
+            var subButton = document.getElementById('sendbutton');
+            var userButton = document.getElementById('userbutton');
+            var userName = document.getElementById('username'); 
+            subButton.style.display = 'inline';
+            messageBox.style.display = 'inline';
+            userName.style.display = 'none';
+            userButton.style.display = 'none';
+            messageBox.select()
+        }
+    })
+    $('#myMessage').keypress(function(event) {
+        if (event.keyCode == 13 || event.which == 13) {
+            socket.send(["&lt;"+$('#username').val()+"&gt; "+$('#myMessage').val(), "message"]);
+            $('#myMessage').val('');
+        }
+    })
+})

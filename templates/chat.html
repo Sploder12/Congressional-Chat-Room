@@ -8,20 +8,16 @@
             {
                 margin: 0; padding: 0; height: 100%; overflow: hidden;
             }
-
-            #messages {
-                color: white;
-            }
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>    
     </head>
     <body>
         <script src="{{ url_for('static', filename='client.js') }}" type="text/javascript" charset="utf-8"></script>
-        <div id="messages"></div>
+        <div id="messages"s></div>
         <div method="post" class="textInput" id="todo-form">
             <input type="text" id="username" style="width: 20%; height: 40px;">
-            <button id="userbutton" onclick="toggleMessagebox()" style="width: 8%; height: 40px;">Set Username</button>
+            <button id="userbutton" style="width: 8%; height: 40px;">Set Username</button>
             <input type="text" id="myMessage" style="width: 90%; height: 80px;">
             <button id="sendbutton" style="width: 8%; height: 80px;">Submit</button>
         </div>
