@@ -7,8 +7,10 @@ A chat room where you can chat with other people or a bot
 ## So far:
 - [X] Set up webserver
 - [X] Set up basic flask script
-- [ ] Set up to run with apache2
-- [ ] Hook basic IRC and chatbot to website
+- [X] Set up to run with apache2
+- [X] Hook basic IRC to website
+- [ ] Hook up chatbot to server
+- [ ] improve looks
 
 ## How to Run
 In terminal run:
