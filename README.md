@@ -15,7 +15,7 @@ A chat room where you can chat with other people or a bot
 ## How to Run
 In terminal run:
 ```
-python main.py
+python3 main.py
 ```
 
 ## Dependencies:
@@ -24,9 +24,3 @@ python main.py
 * Flask
 
 * Flask SocketIO
-
-## Note:
-Make sure you are running python 3 with:
-```
-python --version
-```
