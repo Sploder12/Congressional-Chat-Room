@@ -23,6 +23,8 @@ python main.py
 
 * Flask
 
+* Flask SocketIO
+
 ## Note:
 Make sure you are running python 3 with:
 ```
