@@ -1,4 +1,5 @@
-import json
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '0' 
 import string
 import random 
 import nltk
@@ -7,8 +8,8 @@ from nltk.stem import WordNetLemmatizer
 import tensorflow as tf 
 from tensorflow.keras import Sequential 
 from tensorflow.keras.layers import Dense, Dropout
-nltk.download("punkt")
-nltk.download("wordnet")
+nltk.download("punkt", quiet=True)
+nltk.download("wordnet", quiet=True)
 error = {"error": ["Could you repeat that please?", "Ummm?", "Pardon?", "wut"],
 }
 data = {"intents": [
@@ -127,7 +128,7 @@ def get_response(intents_list, intents_json):
       break
   return result
 while True:
-    message = input("").lower()
-    intents = pred_class(message, words, classes)
-    result = get_response(intents, data)
-    print(result)
+  message = input("").lower()
+  intents = pred_class(message, words, classes)
+  result = get_response(intents, data)
+  print(result)
