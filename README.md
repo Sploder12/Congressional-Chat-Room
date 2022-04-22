@@ -9,7 +9,7 @@ A chat room where you can chat with other people or a bot
 - [X] Set up basic flask script
 - [X] Set up to run with apache2
 - [X] Hook basic IRC to website
-- [ ] Hook up chatbot to server
+- [X] Hook up chatbot to server
 - [ ] improve looks
 
 ## How to Run
